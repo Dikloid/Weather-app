@@ -1,0 +1,64 @@
+div#root {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100dvh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 100vh;
+  margin: auto;
+}
+
+.search {
+  margin: 35px 20px;
+  width: 100%;
+  opacity: .7;
+}
+
+.clouds {
+  height: 100dvh;
+  width: 100%;
+  z-index: -100;
+  position: absolute;
+}
+
+.day {
+  background-image: url("media/day.png");
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 750px;
+  margin: auto;
+  border-radius: 75px;
+  box-shadow: orange 10px 10px 30px;
+}
+
+.night {
+  background-image: url("media/night.png");
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 750px;
+  margin: auto;
+  border-radius: 75px;
+  box-shadow: #4d3399 10px 10px 30px;
+}
+
+@media (max-width: 750px) or (max-height: 600px) {
+  .day {
+    height: 100dvh;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 0;
+  }
+  .night {
+    height: 100dvh;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 0;
+  }
+}
