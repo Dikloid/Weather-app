@@ -9,12 +9,13 @@ div#root {
 
 .wrapper {
   display: flex;
-  max-width: 100vh;
+  flex-direction: column;
+  max-width: 75dvh;
   margin: auto;
 }
 
 .search {
-  margin: 35px 20px;
+  margin: 35px 0;
   width: 100%;
   opacity: .7;
 }
@@ -32,7 +33,7 @@ div#root {
   height: 600px;
   width: 750px;
   margin: auto;
-  border-radius: 75px;
+  border-radius: 50px;
   box-shadow: orange 10px 10px 30px;
 }
 
@@ -42,7 +43,7 @@ div#root {
   height: 600px;
   width: 750px;
   margin: auto;
-  border-radius: 75px;
+  border-radius: 50px;
   box-shadow: #4d3399 10px 10px 30px;
 }
 

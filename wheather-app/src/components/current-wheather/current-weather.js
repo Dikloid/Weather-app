@@ -1,14 +1,40 @@
 import React from 'react';
 import "./current-weather.css"
 
-const CurrentWeather = () => {
+const CurrentWeather = ({data}) => {
     return (
         <div className="weather-container">
             <div className="top">
-                <p className="title">Chelyabinsk</p>
-                <p className="description">Sunny</p>
+                <div>
+                    <p className="title">{data.city}</p>
+                    <p className="description">{data.weather[0].description}</p>
+                </div>
+                <img alt="weather" className="weather-icon" src={require(`../../media/${data.weather[0].icon}.png`)}/>
             </div>
-            <img alt="weather" className="weather-icon" src=""/>
+            <div className="bottom">
+                <p className="temperature">{Math.round(data.main.temp)}°C</p>
+                <div className="details">
+                    <div className="parameter-row">
+                        <span className="parameter-label">Details:</span>
+                    </div>
+                    <div className="parameter-row">
+                        <span className="parameter-label">Feels like</span>
+                        <span className="parameter-value">{Math.round(data.main.feels_like)}°C</span>
+                    </div>
+                    <div className="parameter-row">
+                        <span className="parameter-label">Wind</span>
+                        <span className="parameter-value">{data.wind.speed} m/s</span>
+                    </div>
+                    <div className="parameter-row">
+                        <span className="parameter-label">Humidity</span>
+                        <span className="parameter-value">{data.main.humidity}%</span>
+                    </div>
+                    <div className="parameter-row">
+                        <span className="parameter-label">Pressure</span>
+                        <span className="parameter-value">{data.main.pressure} Pa</span>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
